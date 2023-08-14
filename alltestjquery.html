@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ancestors * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+
+
+   // find: tim kiem the html/id/class con
+
+   // closest: nguoc lai, quay trở ra the cha/id/class cha
+
+   // text(): lay doan text ben trong html 
+   // text(123): set 123 vao ben trong the html
+
+   // val(): lay value cua input
+   // val(123): set 123 vao value
+
+   // this: dai dien cho the đang click vao
+
+   $("li").click(function(){
+       
+
+    //    $("li").find("span").css({"color": "red", "border": "2px solid red"});
+
+    //    $("li").closest("ul.xx").css({"color": "red", "border": "2px solid red"});
+
+      //  var xx = $("li").closest("ul.xx").find("span").text()
+      //  alert(xx)
+      var x = 2;
+      var y = 3;
+      var sum;
+      sum = x * y 
+       var xpp = $("li").closest("ul.xx").find("span").text(sum)
+       alert(xpp)
+
+    //    var xx = $("li").closest("ul.xx").find("input").val()
+    //    alert(xx)
+      //     var xxp
+      //     xxp = xxp + 1
+      //  $("li").closest("ul.xx").find("input").val("xxp")
+      //  alert(xxp)
+
+        // var xx = $("li").closest("ul.xx").find("img").attr("src")
+        // alert(xx)
+      
+   })
+ 
+});
+</script>
+</head>
+
+<body class="ancestors">body (great-great-grandparent)
+  
+    <ul class="xx">ul xx (second ancestor - second grandparent) 
+      
+      <ul>ul (first ancestor - first grandparent)
+        
+        <li>li (direct parent)
+          <span>linh kute </span>
+          <input placeholder="rwqrqw" type="text" name="" value="1234">
+          <img src="https://icdn.24h.com.vn/upload/4-2022/images/2022-12-10/120x90/sadasasfasfasdasdas-1670634547-241-width740height555.jpg">
+        </li>
+
+        
+
+      </ul>
+    </ul>   
+  
+
+
+</body>
+
+</html>
